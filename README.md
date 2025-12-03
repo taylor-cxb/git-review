@@ -48,7 +48,10 @@ Changes not staged for commit:
 ![Demo](demo.gif)
 
 > **Recording**: Uses asciinema to show the complete workflow from clean state to staged changes
-![Changes from demo](review-branch.png)
+
+## Changes generated using git-review tool
+
+![Changes](review-branch.png)
 
 ## Features
 
