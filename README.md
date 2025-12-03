@@ -1,6 +1,53 @@
 # git-review
 
-Interactive branch comparison tool for reviewing changes before creating a PR.
+**Clean up your messy branches before creating a PR.**
+
+## What Does This Do?
+
+Ever work on a feature branch and end up with:
+- Debug console.logs you forgot to remove
+- Experimental code you don't want to commit
+- Changes to files you didn't mean to modify
+- A messy commit history that needs cleaning
+
+**git-review** lets you review and selectively choose which changes to include in your PR:
+
+1. **Compares two branches** - Shows all differences between your feature branch and main
+2. **Creates a review branch** - All changes are uncommitted and ready for review
+3. **Review each file** - Use VSCode's Source Control to see diffs and stage only what you want
+4. **Creates clean history** - Optionally replaces your feature branch with only the approved changes
+
+### Before and After
+
+```bash
+# BEFORE: Your feature branch
+$ git status
+nothing to commit, working tree clean
+
+# But it has 25 commits and lots of messy changes vs main
+
+# AFTER: Running git-review
+$ git-review
+✔ Select source branch (FROM): feat/my-feature
+✔ Select target branch (TO): main
+
+$ git status
+On branch feat/my-feature-review
+Changes not staged for commit:
+  modified:   src/component.tsx
+  modified:   src/utils.ts
+  modified:   src/debug.ts        # ← You can discard this
+  modified:   src/experimental.ts # ← And this
+  ...
+
+# Now review in VSCode and stage only what you want!
+```
+
+## Demo
+
+![Demo](demo.gif)
+
+> **Recording**: Uses asciinema to show the complete workflow from clean state to staged changes
 
 ## Features
 
