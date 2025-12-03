@@ -57,11 +57,9 @@ Changes not staged for commit:
 
 - 🔍 Compare any two branches with a visual diff in your editor
 - ✅ Selectively stage/commit only the changes you want
-- 🎨 Beautiful colored CLI output
 - 💬 Interactive branch selection with arrow keys
 - 🔄 Fetches remote branches automatically
 - 🚀 Works globally in any git repository
-- ⚡ Fast CLI mode when all flags provided
 
 ## Installation
 
@@ -183,20 +181,6 @@ git-review/
 └── package.json      # Project configuration
 ```
 
-### Making Changes
-
-```bash
-cd /home/tpwidman/Utils/git-review
-
-# Make your changes in src/index.ts
-
-# Rebuild
-npm run build
-
-# The changes are automatically available via npm link
-git-review --help
-```
-
 ### Useful Commands
 
 ```bash
@@ -205,23 +189,3 @@ npm run dev          # Run directly with ts-node
 npm link             # Re-link globally (if needed)
 npm unlink -g        # Uninstall globally
 ```
-
-## Troubleshooting
-
-**Command not found:**
-```bash
-cd /home/tpwidman/Utils/git-review
-npm link
-```
-
-**TypeScript errors:**
-```bash
-npm run build
-```
-
-**Uncommitted changes warning:**
-The tool will prompt you to stash your changes before creating the review branch.
-
-## License
-
-MIT
