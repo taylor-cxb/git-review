@@ -43,6 +43,8 @@ Changes not staged for commit:
 # Now review in VSCode and stage only what you want!
 ```
 
+> **⚠️ Warning:** When you finalize the review, git-review will squash all commits from your feature branch into a single new commit. Your original commit history will be replaced. If you need to preserve individual commits, use this tool for review only and manually cherry-pick or rebase instead.
+
 ## Demo
 
 ![Demo](demo.gif)
