@@ -63,7 +63,13 @@ Changes not staged for commit:
 
 ## Installation
 
-The tool is already installed globally via `npm link`. You can use it anywhere!
+```bash
+npm install
+npm run build
+npm link  # Install globally as 'git-review' command
+```
+
+Now you can use `git-review` anywhere:
 
 ```bash
 git-review --help
