@@ -2,17 +2,28 @@
 
 This guide helps you record a demo showing the git-review workflow.
 
+## Setup
+
+**Important**: Run these commands from a project directory with git branches (e.g., `~/Projects/nform`), NOT from the git-review tool directory.
+
 ## Recording with asciinema
 
 ```bash
+# Navigate to your project directory
+cd ~/Projects/nform  # or any repo with branches
+
 # Start recording
-asciinema rec demo.cast
+asciinema rec ~/Utils/git-review/demo.cast --overwrite
 
 # Follow the script below...
 # When done, press Ctrl+D
 
-# Convert to GIF
+# Convert to GIF (run from git-review directory)
+cd ~/Utils/git-review
 agg demo.cast demo.gif --speed 1.5 --font-size 16
+
+# Or use full paths from your project directory
+agg ~/Utils/git-review/demo.cast ~/Utils/git-review/demo.gif --speed 1.5 --font-size 16
 ```
 
 ## Demo Script
